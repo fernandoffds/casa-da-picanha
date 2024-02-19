@@ -16,6 +16,9 @@ html, body {
     src: url(/fonts/OpenSans-Light.ttf);
     font-family: "light";
 }
+.clear {
+    clear: both;
+}
 .header > h1 {
     color: white;
     padding: 19px;
@@ -61,17 +64,16 @@ input {
     color: brown;
 }
 input[type=submit] {
+    
     color: yellow;
     border: 5px solid yellow;
     background-color: brown;
     font-family: fonte;
     font-size: 50px;
-    position: relative;
-    top: 30px;
-    left: 25px;
     width: 300px;
     height: 80px;
     cursor: pointer;
+    margin: 40px 40px;
 }
 input[type=submit]:hover {
     background-color: #8b2222;
@@ -85,7 +87,8 @@ input[type=submit]:hover {
     margin-left: 40px;
     margin-top: 40px;
     float: left;
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     height: 270px;
     background-color: rgba(255,255 ,0 ,0.7 );
 }
@@ -95,37 +98,43 @@ li {
     margin-top: 30px;
 }
 .sobre {
-   
+    padding: 40px 2%;   
     background-color: brown;
     width: 100%;
-    height: 400px;
+    height: auto;
+    text-align: center;
 }
 .h1 {
-    font-size: 50px;
-    padding-top: 40px;
-    padding-left: 710px;
-    color: yellow;
-    font-family: "fonte";
+   text-align: center;
+   color: yellow;
+   font-family: "fonte";
+   font-size: 50px;
 }
 .b {
     /*
     position: relative;
     left: 0;
     */
-    padding: 20px 200px;
+    margin: 15px 0;
     font-family: "light";
     color: yellow;
+    width: 100%;
+    max-width: 768px;
+    text-align: justify;
+    display: inline-block;
 }
 .baixo {
-    width: 100%;
-    height: 900px;
-    background-color: yellow;
+   background-color: yellow;
+   height: 100%;
+   text-align: center;
 }
+
 .mensagem {
     width: 100%;
     height: 300px;
 }
 .mensagem p {
+    width: 100%;
     color: brown;
     font-size: 50px;
     padding-top: 100px;
@@ -133,74 +142,19 @@ li {
     text-align: center;
     font-family: "fonte";
 }
-.churrasco {
-    
-    width: 100%;
+.container-single {
+   float: left;
+   width: 33.3333%;
+   padding: 5px;
 }
-
-.carne {
-    border-radius: 50%;
-    margin-left: 150px;
-    width: 300px;
-    height: 250px;
+.container-single img {
+   width: 150px;
+   border-radius: 50%;
 }
-.molho {
-    border-radius: 50%;
-    margin-left: 200px;
-
-}
-.bebida {
-    border-radius: 50%;
-    margin-left: 150px;
-    width: 300px;
-    height: 250px;
-}
-.churrasco p {
-    width: 250px;
-    margin-left: 190px;
-}
-.titulo-do-texto {
-    display: flex;
-    font-family: "fonte";
-    color: brown;
-    font-size: 20px;
-}
-.titulo-do-texto h4 {
-    margin: 30px 210px;
-}
-.titulo3 {
-    position: relative;
-    left: -50px;
-}
-.titulo2 {
-    position: relative;
-    right: -25px;
-}
-.titulo1 {
-    position: relative;
-    right: -35px;
-}
-.texto {
-    display: flex;
-}
-.texto1 {
-    position: relative;
-    left: -15px;
-}
-.texto2 {
-    position: relative;
-    right: -15px;
-}
-.texto3 {
-    position: relative;
-    left: -20px;
-}
-.texto p {
-    width: 285px;
-    margin-left: 180px;
-    font-family: "light";
-    color: brown;
-
+.container-single p {
+    display: inline-block;
+    text-align: justify;
+    padding: 10px 10px;
 }
 footer {
     text-align: center;
@@ -211,4 +165,99 @@ footer {
     padding-top: 20px;
     font-family: "light";
     color: white;
+}
+@media screen and (max-width: 1024px) {
+    .header {
+        width: 100%;
+        text-align: center;
+        height: auto;
+        padding: 15px 0;
+    }
+    .header > h1 {
+       margin: 0;    
+    }
+    .banner {
+        width: 100%;
+        height: auto;
+        padding: 40px 2%;
+        text-align: center;
+       
+    }
+    .lista {
+        padding: 30px 0;
+        float: left;
+        width: 60%;
+        margin-top: 30px;
+        max-width: 500px;
+        height: auto;
+    }
+    .form {
+        margin-top: 30px;
+        max-width: 400px;
+        padding: 10px;
+        width: 60%;
+        height: 100%;
+        top: 0;
+        float: right;  
+    
+
+    }
+    input {
+       
+        width: 90%;
+        height: 55px;
+       
+    }
+    .p  {
+        display: inline-block;
+        text-align: center;
+        float: none;
+      
+    }
+    input[type=submit] {
+       
+       
+        height: auto;
+        max-width: 280px;
+        width: 100%;
+    }
+    .sobre {
+        display: inline-block;
+        margin-bottom: -4px;
+        height: auto;
+    }
+    .baixo {
+        height: 100%;
+    }
+    
+}  
+
+@media screen and (max-width: 768px) {
+    .lista {
+        margin-top: 0;
+        float: none;
+        display: inline-block;
+        margin-left: 0;
+        width: 100%;
+    }
+    .form {
+        float: none;
+        display: inline-block;
+        width: 90%;
+        margin-top: 30px;
+    }
+    .baixo {
+        background-color: yellow;
+        height: auto;
+     }
+    .container-single {
+        float: none;
+        display: inline-block;
+        width: 100%;
+        max-width: 600px;
+        padding: 30px 0;
+        height: 100%;
+     }
+    
+
 }
