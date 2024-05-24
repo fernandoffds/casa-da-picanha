@@ -47,6 +47,7 @@ html, body {
     background-color: brown;
     border: 8px solid yellow;
     float: right;
+    padding: 20px;
 }
 
 .form h2 {
@@ -56,12 +57,39 @@ html, body {
     color: yellow;
     font-family:"light";
 }
-input {
+input[type=text] {
+    margin: 5px 10px;
+    width: 350px;
+    height: 50px;
+    padding: 8px 10px 8px 10px;
+    font-family:"light";
+    color: brown;
+}
+input[type=text]:focus {
+    outline: 0  ;
+}
+
+input[type=email] {
     margin: 5px 10px;
     width: 350px;
     height: 50px;
     font-family:"light";
+    padding: 8px 10px 8px 10px;
     color: brown;
+}
+input[type=email]:focus {
+    outline: 0  ;
+}
+input[type=number] {
+    margin: 5px 10px;
+    width: 350px;
+    height: 50px;
+    font-family:"light";
+    padding: 8px 10px 8px 10px;
+    color: brown;
+}
+input[type=number]:focus {
+    outline: 0  ;
 }
 input[type=submit] {
     
